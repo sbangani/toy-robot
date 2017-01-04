@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+<style>
+#command {
+    font-size: 1em;
+}
+#error {
+    color: #FF0000;
+}
+#report {
+    color: #0892d0;
+}	
+	
+</style>
+	
+</head>
+<body>
+<h2>To Robot simulator in Javascript</h2>
+
+<div> <strong>Command: </strong>
+
+    <input type="text" id="command" onfocusout="processCommand(this.value)" onkeydown="if (event.keyCode == 13) processCommand(this.value);"> <span id="error"></span>
+
+</div>
+<div> <strong>Report: <span id="report"></span></strong>
+
+</div>
+<canvas id="c" width="551" height="551"></canvas>
+
+</body>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript" src="toy.js"></script>
+</html>
